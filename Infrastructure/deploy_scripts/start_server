@@ -1,0 +1,31 @@
+export NVM_DIR="$HOME/.nvm"
+
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+# This loads nvm
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+# This loads nvm bash_completion
+
+# Start User Interface Server
+source ~/.bashrc
+if [ "$DEPLOYMENT_GROUP_NAME" == "ui-deployment-group" ]
+then
+    cd /var/www/html/eletricgo/UserInterface
+    pm2 start npm --name "userInterface" -- run start-linux
+else
+    # Start Logistics Management Server
+    cd /var/www/html/eletricgo/Logistics
+    pm2 start npm --name "logistics" -- run start
+
+    # Start Warehouse Management Server
+    cd /var/www/html/eletricgo/WarehouseManagement/Src/EletricGo.BackEnd
+    pm2 start dotnet --name "warehouseManagement" -- run
+
+    # Start Planning Server
+    cd /var/www/html/eletricgo/Planning/prolog
+    pm2 start swipl --name "planning" -- -s servidor.pl -g "startServer(8080)"
+
+    # Start Model 3d Server
+    # cd /var/www/html/eletricgo/Model_3D
+    # pm2 start npm --name "model3d" -- run dev --host
+fi

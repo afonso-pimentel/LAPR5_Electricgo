@@ -1,0 +1,53 @@
+image: mcr.microsoft.com/dotnet/sdk:6.0
+
+pipelines:
+  pull-requests:
+    "**":
+      - parallel:
+          - step: &uiComponentStep
+              name: Build and Test UI(SPA)
+              image: node:18.11.0
+              script:
+                - cd ./UserInterface
+                - npm install --legacy-peer-deps
+                - npm run build
+                - npm test
+              artifacts:
+                - UserInterface/build/**
+          - step: &logisticsComponentStep
+              name: Build and Test Logistics Component
+              image: node:18.11.0
+              script:
+                - cd Logistics/
+                - npm install
+                - npm test
+          - step: &warehouseComponentStep
+              name: Build and Test Warehouse Component
+              caches:
+                - dotnetcore
+              script:
+                - SOLUTION_PATH=./WarehouseManagement/WarehouseManagement.sln
+                - REPORTS_PATH=./test-reports/build_${BITBUCKET_BUILD_NUMBER}
+                - dotnet restore $SOLUTION_PATH
+                - dotnet build --no-restore --configuration Release $SOLUTION_PATH
+                - dotnet test --no-build $SOLUTION_PATH --configuration Release --test-adapter-path:. --logger:"junit;LogFilePath=$REPORTS_PATH/junit.xml"
+          - step: &lintCodeStep
+              name: Lint the code
+              caches:
+                - dotnetcore
+              script:
+                - export SOLUTION_PATH=./WarehouseManagement/WarehouseManagement.sln
+                - export REPORTS_PATH=linter-reports
+                - dotnet new tool-manifest
+                - dotnet tool install JetBrains.ReSharper.GlobalTools
+                - dotnet tool restore
+                - dotnet jb inspectcode $SOLUTION_PATH --output="${REPORTS_PATH}/jb-${BITBUCKET_BUILD_NUMBER}.xml"
+              artifacts:
+                - linter-reports/**
+  branches:
+    master:
+      - parallel:
+          - step: *uiComponentStep
+          - step: *logisticsComponentStep
+          - step: *warehouseComponentStep
+          - step: *lintCodeStep

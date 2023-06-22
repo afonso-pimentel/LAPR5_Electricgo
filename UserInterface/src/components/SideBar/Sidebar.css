@@ -1,0 +1,73 @@
+li > .active{
+    background-color: #ffffff;
+    color: #202124;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0 2rem;
+}
+
+.navbar-title{
+    font-size: 27px;
+    color: #fff;
+    display: flex;
+    font-weight: 700;
+    justify-content: center;
+    margin: auto;
+}
+
+.sidenav {
+    width: 250px;
+    transition: width 0.3s ease-in-out;
+    height: 100vh;
+    background-color: rgb(10,25,41);
+    padding-top: 14px;
+}
+.sidenavClosed {
+    height: 100vh;
+    background-color: rgb(10,25,41);
+    transition: width 0.3s ease-in-out;
+    padding-top: 14px;
+    width: 60px
+}
+.sideitem {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #B2BAC2;
+    text-decoration: none;
+    overflow: hidden;
+    min-height: 50px;
+}
+.linkText {
+    padding-left: 16px;
+}
+
+.sideitem:hover {
+    background-color: #244f7d1c;
+
+}
+
+
+.menuBtn {
+    align-self: center;
+    align-self: flex-start;  
+    justify-self: flex-end;
+    color: #B2BAC2;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.userName {
+    color: #B2BAC2;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    margin-right: 20px;
+    cursor: pointer;
+}

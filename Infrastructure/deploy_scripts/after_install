@@ -1,0 +1,20 @@
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  
+# This loads nvm
+
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  
+# This loads nvm bash_completion
+
+# Install User Interface Components
+if [ "$DEPLOYMENT_GROUP_NAME" == "ui-deployment-group" ]
+then
+    cd /var/www/html/eletricgo/UserInterface
+    npm install --legacy-peer-deps
+else
+    # Install Logistics and Warehouse Management Components
+    cd /var/www/html/eletricgo/Logistics
+    npm install
+
+    cd /var/www/html/eletricgo/WarehouseManagement
+    dotnet restore
+fi

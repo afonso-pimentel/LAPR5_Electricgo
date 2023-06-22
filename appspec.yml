@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/eletricgo
+hooks:
+  AfterInstall:
+    - location: Infrastructure/deploy_scripts/after_install
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: Infrastructure/deploy_scripts/start_server
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: Infrastructure/deploy_scripts/stop_server
+      timeout: 300
+      runas: root

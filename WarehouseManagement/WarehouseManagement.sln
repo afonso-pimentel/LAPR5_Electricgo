@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{2DBCABE6-CFB4-41CF-82A1-4F0341DB31D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{D6D2B1D4-4372-47DB-842C-32581F6281A9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EletricGo.Domain", "Src\EletricGo.Domain\EletricGo.Domain.csproj", "{2C78F2C4-4291-4F00-B42D-69C5E6335E63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EletricGo.Infrastructure", "Src\EletricGo.Infrastructure\EletricGo.Infrastructure.csproj", "{F1526735-1DEC-4A8A-AAEB-D22D1DA2AF8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{ED60DE7D-5079-410F-A4F6-364C8AC4730D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{809BCA67-8E1D-4364-B12F-F7768321B450}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LS75-22", "LS75-22", "{A80BE238-1CD8-43FD-AA84-C1281B3C0460}"
+	ProjectSection(SolutionItems) = preProject
+		Docs\LS75-22\readme.md = Docs\LS75-22\readme.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EletricGo.BackEnd", "Src\EletricGo.BackEnd\EletricGo.BackEnd.csproj", "{9DCB0894-9A38-461C-B186-7C1AEDD8AAC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EletricGo.Domain.UnitTests", "Tests\EletricGo.Domain.UnitTests\EletricGo.Domain.UnitTests.csproj", "{15A183E5-9E05-4FE0-87F8-76EABA3E8817}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EletricGo.BackEnd.UnitTests", "Tests\EletricGo.BackEnd.UnitTests\EletricGo.BackEnd.UnitTests.csproj", "{B3E0F376-EAD7-45AA-9DD1-CB204ECF3656}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EletricGo.BackEnd.IntegrationTests", "Tests\EletricGo.BackEnd.IntegrationTests\EletricGo.BackEnd.IntegrationTests.csproj", "{CB6C6C19-7FFB-4606-A8CD-9FB9A4590BC7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C78F2C4-4291-4F00-B42D-69C5E6335E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C78F2C4-4291-4F00-B42D-69C5E6335E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C78F2C4-4291-4F00-B42D-69C5E6335E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C78F2C4-4291-4F00-B42D-69C5E6335E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1526735-1DEC-4A8A-AAEB-D22D1DA2AF8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1526735-1DEC-4A8A-AAEB-D22D1DA2AF8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1526735-1DEC-4A8A-AAEB-D22D1DA2AF8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1526735-1DEC-4A8A-AAEB-D22D1DA2AF8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DCB0894-9A38-461C-B186-7C1AEDD8AAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DCB0894-9A38-461C-B186-7C1AEDD8AAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DCB0894-9A38-461C-B186-7C1AEDD8AAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DCB0894-9A38-461C-B186-7C1AEDD8AAC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A183E5-9E05-4FE0-87F8-76EABA3E8817}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A183E5-9E05-4FE0-87F8-76EABA3E8817}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A183E5-9E05-4FE0-87F8-76EABA3E8817}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A183E5-9E05-4FE0-87F8-76EABA3E8817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3E0F376-EAD7-45AA-9DD1-CB204ECF3656}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3E0F376-EAD7-45AA-9DD1-CB204ECF3656}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3E0F376-EAD7-45AA-9DD1-CB204ECF3656}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3E0F376-EAD7-45AA-9DD1-CB204ECF3656}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB6C6C19-7FFB-4606-A8CD-9FB9A4590BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB6C6C19-7FFB-4606-A8CD-9FB9A4590BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB6C6C19-7FFB-4606-A8CD-9FB9A4590BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB6C6C19-7FFB-4606-A8CD-9FB9A4590BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2C78F2C4-4291-4F00-B42D-69C5E6335E63} = {2DBCABE6-CFB4-41CF-82A1-4F0341DB31D7}
+		{F1526735-1DEC-4A8A-AAEB-D22D1DA2AF8B} = {2DBCABE6-CFB4-41CF-82A1-4F0341DB31D7}
+		{A80BE238-1CD8-43FD-AA84-C1281B3C0460} = {D6D2B1D4-4372-47DB-842C-32581F6281A9}
+		{9DCB0894-9A38-461C-B186-7C1AEDD8AAC9} = {2DBCABE6-CFB4-41CF-82A1-4F0341DB31D7}
+		{15A183E5-9E05-4FE0-87F8-76EABA3E8817} = {ED60DE7D-5079-410F-A4F6-364C8AC4730D}
+		{B3E0F376-EAD7-45AA-9DD1-CB204ECF3656} = {ED60DE7D-5079-410F-A4F6-364C8AC4730D}
+		{CB6C6C19-7FFB-4606-A8CD-9FB9A4590BC7} = {ED60DE7D-5079-410F-A4F6-364C8AC4730D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0B47A70E-BEB2-443D-A389-FB92B8A9DA2F}
+	EndGlobalSection
+EndGlobal

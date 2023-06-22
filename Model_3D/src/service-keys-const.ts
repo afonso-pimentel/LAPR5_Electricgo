@@ -1,0 +1,4 @@
+export const SERVICE_KEYS = {
+  PATH_SERVICE: Symbol("PATH_SERVICE"),
+  WAREHOUSE_SERVICE: Symbol("WAREHOUSE_SERVICE"),
+};
